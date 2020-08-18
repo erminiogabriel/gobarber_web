@@ -25,7 +25,7 @@ const SignIn: React.FC = () => {
   const { addToast } = useToast();
   const history = useHistory();
 
-  const handleSubmit = useCallback(
+  const handleSignin = useCallback(
     async (data: SignInFormData) => {
       try {
         formRef.current?.setErrors({});
@@ -65,7 +65,7 @@ const SignIn: React.FC = () => {
       <Content>
         <AnimationContainer>
           <img src={logoImg} alt="GoBarber" />
-          <Form ref={formRef} onSubmit={handleSubmit}>
+          <Form ref={formRef} onSubmit={handleSignin}>
             <h1>Faça seu logon</h1>
             <Input name="email" icon={FiMail} placeholder="E-mail" />
             <Input
